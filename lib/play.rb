@@ -73,6 +73,10 @@ def won?(board)
   return false
 end
 
+def draw?(board)
+  !(won?(board)) && full?(board)
+end
+
 def play(board)
   while !over?(board) && !won?(board) && !draw?(board)
   turn(board)
