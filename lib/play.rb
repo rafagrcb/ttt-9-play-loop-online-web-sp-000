@@ -63,7 +63,7 @@ def full?(board)
 end
 
 def won?(board)
-  win_conditions.each do |win|
+  win_conditions do |win|
   if win.all?{|y| board[y] == "X"}
     return win
     elsif win.all?{|y| board[y] == "O"}
